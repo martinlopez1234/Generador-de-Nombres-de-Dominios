@@ -2,11 +2,13 @@ var pronoun = ["the", "our"];
 var adj = ["great", "big"];
 var noun = ["jogger", "racoon"];
 var dominios = [".com", ".net", ".us", ".io"];
-for (let i = 0; i <= 8; i++) {
-  console.log(
-    pronoun[Math.floor(Math.random() * pronoun.length)] +
-      adj[Math.floor(Math.random() * adj.length)] +
-      noun[Math.floor(Math.random() * noun.length)] +
-      dominios[Math.floor(Math.random() * dominios.length)]
-  );
+
+for(let p=0;p<pronoun.length;p++){
+    for(let a = 0;a<adj.length;a++){
+        for(let n = 0;n<noun.length;n++){
+            for(let d=0;d<dominios.length;d++)
+            console.log(pronoun[p]+adj[a]+noun[n] + dominios[d]);
+        }
+    }
 }
+
